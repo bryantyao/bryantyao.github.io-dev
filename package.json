@@ -1,0 +1,52 @@
+{
+  "name": "bryantyao.github.io",
+  "version": "1.0.0",
+  "description": "My website",
+  "main": "index.html",
+  "scripts": {
+    "build": "mkdirp lib && browserify src/index.js -o lib/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bryantyao/bryantyao.github.io.git"
+  },
+  "author": "Bryant Yao",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/bryantyao/bryantyao.github.io/issues"
+  },
+  "homepage": "https://bryantyao.github.io",
+  "dependencies": {
+    "react": "^15.6.1",
+    "react-dom": "^15.6.1"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.0.0",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
+    "babelify": "^7.3.0",
+    "browserify-css": "^0.11.1",
+    "mkdirp": "^0.5.1"
+  },
+  "babel": {
+    "presets": [
+      "react",
+      "es2015"
+    ]
+  },
+  "browserify": {
+    "transform": [
+      [
+        "babelify",
+        {
+          "presets": [
+            "react",
+            "es2015"
+          ]
+        }
+      ],
+      "browserify-css"
+    ]
+  }
+}
