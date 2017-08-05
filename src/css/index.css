@@ -1,1 +1,8 @@
+/*@import "node_modules/bootstrap/dist/css/bootstrap.css";*/
 @import url("./App.css");
+
+body, html, #root {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+}
