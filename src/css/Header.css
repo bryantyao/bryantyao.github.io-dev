@@ -1,0 +1,8 @@
+.navbar a.nav-link {
+  outline: 0;
+}
+
+.navbar .nav-link.active {
+  border-bottom: solid blue 0.25rem;
+  padding-bottom: 0;
+}

@@ -1,0 +1,11 @@
+.home {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 80%;
+}
+
+.home .intro {
+  font-size: 2rem;
+}
+

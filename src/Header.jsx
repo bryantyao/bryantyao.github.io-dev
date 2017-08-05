@@ -1,8 +1,15 @@
 import * as React from "react";
 import { Component } from 'react';
+import { NavLink } from 'react-router-dom'
 
 export default class Header extends Component {
     render() {
+        console.log("Rendering:");
+        var routes = this.props.routes || [];
+        const isActive = function(match,location) {
+          return location.pathname === this.path;
+        }
+
         return (
           <nav className={`navbar navbar-toggleable-md navbar-light bg-faded ${this.props.moreClassName || ""}`}>
             <button className="navbar-toggler navbar-toggler-left" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -11,15 +18,11 @@ export default class Header extends Component {
 
             <div className="collapse navbar-collapse" id="navbarSupportedContent">
               <ul className="navbar-nav ml-auto justify-content-end">
-                <li className="nav-item active">
-                  <a className="nav-link" href="#">Home <span className="sr-only">(current)</span></a>
-                </li>
-                <li className="nav-item">
-                  <a className="nav-link" href="#">Experience</a>
-                </li>
-                <li className="nav-item">
-                  <a className="nav-link" href="#">About</a>
-                </li>
+                {routes.map((route, index) => (
+                  <li key={index} className="nav-item">
+                    <NavLink activeClassName="active" isActive={isActive.bind(route)} className="nav-link" to={route.path}>{route.name}</NavLink>
+                  </li>
+                ))}
               </ul>
             </div>
           </nav>

@@ -1,4 +1,6 @@
 @import url("./Content.css");
+@import url("./Header.css");
+@import url("./Home.css");
 
 .app {
   width: 100%;
