@@ -5,9 +5,6 @@ import { NavLink } from 'react-router-dom'
 export default class Header extends Component {
     render() {
         var routes = this.props.routes || [];
-        const isActive = function(match,location) {
-          return location.pathname === this.path;
-        }
 
         return (
           <nav className={`navbar navbar-toggleable-md navbar-light bg-faded ${this.props.moreClassName || ""}`}>
@@ -19,13 +16,17 @@ export default class Header extends Component {
               <ul className="navbar-nav ml-auto justify-content-end">
                 {routes.map((route, index) => (
                   <li key={index} className="nav-item">
-                    <NavLink activeClassName="active" isActive={isActive.bind(route)} className="nav-link" to={route.path}>{route.name}</NavLink>
+                    <NavLink activeClassName="active" isActive={this._isActive.bind(route)} className="nav-link" to={route.path}>{route.name}</NavLink>
                   </li>
                 ))}
               </ul>
             </div>
           </nav>
         );
+  }
+
+  _isActive(match,location) {
+    return location.pathname === this.path;
   }
 }
 
