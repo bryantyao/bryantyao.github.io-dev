@@ -4,7 +4,6 @@ import { NavLink } from 'react-router-dom'
 
 export default class Header extends Component {
     render() {
-        console.log("Rendering:");
         var routes = this.props.routes || [];
         const isActive = function(match,location) {
           return location.pathname === this.path;
