@@ -7,6 +7,7 @@ window.$ = window.jQuery = jQuery;
 window.Tether = Tether;
 
 require('bootstrap');
+require('../node_modules/bootstrap/dist/css/bootstrap.css');
 require('./css/index.css');
 
 ReactDOM.render(
