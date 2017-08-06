@@ -1,0 +1,13 @@
+{
+  name: "IBM",
+  start: "June 2012",
+  end: "Oct 2014",
+  total_work_years: "2.4 years",
+  description: "Front and back end developer for the Tools Base Administration Console. Tools Base Administration Console is a software framework which provides a modern web interface for monitoring and managing IMS databases across a user's entire enterprise.",
+  highlights: [
+    "Developed new extension points that allow other developers to extend our web interface",
+    "Developed and enhanced web pages that are used to create a simple, comprehensive overview of the enterprise or interface with DB2 and IMS tools on the mainframe",
+    "Developed and maintained SQL code that can be used to capture user input or cache information from the mainframe",
+    "Wrote threads responsible for synchronizing databases exceptions and reports generated from IMS tools"
+  ]
+}
