@@ -6,10 +6,10 @@
   "main": "index.html",
   "scripts": {
     "start": "react-scripts start",
-    "dev-build": "PUBLIC_URL='https://bryantyao.github.io/bryantyao.github.io-dev' npm run build",
+    "prod-build": "PUBLIC_URL='https://bryantyao.github.io/' npm run build",
     "build": "react-scripts build",
-    "dev-deploy": "npm run dev-build && gh-pages -d build",
-    "dev-cleanup": "rm -f index.html lib/index.js",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "view-build": "serve -s docs",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -22,7 +22,7 @@
   "bugs": {
     "url": "https://github.com/bryantyao/bryantyao.github.io-dev/issues"
   },
-  "homepage": "https://bryantyao.github.io/",
+  "homepage": "https://bryantyao.github.io/bryantyao.github.io-dev",
   "dependencies": {
     "bootstrap": "^4.0.0-alpha.6",
     "jquery": "^3.2.1",
