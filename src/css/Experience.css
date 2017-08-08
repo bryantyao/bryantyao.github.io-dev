@@ -1,7 +1,34 @@
 .experience {
-  padding-left: 2.5rem;
+  display: flex;
+  max-width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 2.5rem;
+  flex-flow: row wrap;
 }
 
-.experience > p {
+.experience > * {
   font-size: 1.25rem;
 }
+
+.experience .techStack {
+  margin-top: -1rem;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 1rem;
+}
+
+.experience .techStack th, .experience .techStack td {
+  font-size: 1.2rem;
+  padding-top: 0.3rem;
+}
+
+.experience .techStack td:not(:first-child),
+.experience .techStack th:not(:first-child) {
+  padding-left: 1rem;
+}
+
+.experience .techStack thead tr:first-child {
+  border-bottom: 0.1rem solid black;
+}
+
