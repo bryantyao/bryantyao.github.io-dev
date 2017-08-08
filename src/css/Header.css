@@ -9,7 +9,7 @@
 
 .navbar .navbar-nav {
   width: 100%;
-  justify-content: end;
+  justify-content: flex-end;
 }
 
 .navbar .navbar-nav .nav-item {
