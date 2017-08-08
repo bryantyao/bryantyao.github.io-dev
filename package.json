@@ -6,8 +6,9 @@
   "main": "index.html",
   "scripts": {
     "start": "react-scripts start",
-    "build": "mkdirp lib && cp public/index.html index.html && browserify src/index.js -o lib/index.js",
+    "build": "react-scripts build && rm -r docs && mv build docs",
     "dev-cleanup": "rm -f index.html lib/index.js",
+    "view-build": "serve -s docs",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -36,8 +37,8 @@
     "babelify": "^7.3.0",
     "browserify": "^14.4.0",
     "browserify-css": "^0.11.1",
-    "mkdirp": "^0.5.1",
-    "react-scripts": "^1.0.10"
+    "react-scripts": "^1.0.10",
+    "serve": "^6.0.6"
   },
   "babel": {
     "presets": [
