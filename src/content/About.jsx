@@ -4,7 +4,7 @@ import { Component } from 'react';
 export class About extends Component {
   render() {
     return (
-      <div id={this.props.id || ""} className={`${this.props.moreClassName || ""}`}>
+      <div id={this.props.id || ""} className={`about ${this.props.moreClassName || ""}`}>
         <div>
         </div>
         <div className="d-flex flex-column align-items-center">
