@@ -10,5 +10,9 @@
 }
 
 .app .content {
-  padding-top: 3.25rem;
+  margin-top: 3.5rem;
 }
+
+/*.app .content > * {
+  height: 100%;
+}*/

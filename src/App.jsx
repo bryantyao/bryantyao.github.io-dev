@@ -34,7 +34,7 @@ export default class App extends Component {
     return (
       <Router hashType="noslash">
         <div id="app" className="app">
-          <Header moreClassName="fixed-top" routes={App.ROUTES}/>
+        {/*<Header moreClassName="fixed-top" routes={App.ROUTES}/>*/}
           <Content routes={App.ROUTES}/>
         </div>
       </Router>
