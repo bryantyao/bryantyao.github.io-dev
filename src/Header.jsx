@@ -7,20 +7,14 @@ export default class Header extends Component {
     var routes = this.props.routes || [];
 
     return (
-      <nav className={`navbar navbar-toggleable-md navbar-light bg-faded ${this.props.moreClassName || ""}`}>
-        <button className="navbar-toggler navbar-toggler-left" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span className="navbar-toggler-icon"></span>
-        </button>
-
-        <div className="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul className="navbar-nav ml-auto justify-content-end">
+      <nav className={`navbar flex-row navbar-toggleable-md navbar-light bg-faded ${this.props.moreClassName || ""}`}>
+          <div className="navbar-nav flex-row">
             {routes.map((route, index) => (
-              <li key={index} className="nav-item">
+              <span key={index} className="nav-item">
                 <NavLink activeClassName="active" isActive={this._isActive.bind(route)} className="nav-link" to={route.path}>{route.name}</NavLink>
-              </li>
+              </span>
             ))}
-          </ul>
-        </div>
+          </div>
       </nav>
     );
   }
