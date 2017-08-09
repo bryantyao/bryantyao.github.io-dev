@@ -6,3 +6,12 @@ body, html, #root {
   height: 100%;
   margin: 0;
 }
+
+.linkContainer a:first-child {
+  padding-right: 0.5rem;
+}
+
+.linkContainer a:not(:first-child) {
+  padding: 0 0.5rem;
+  border-left: 0.1rem solid black;
+}
