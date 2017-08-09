@@ -4,7 +4,7 @@ import { Component } from 'react';
 export class Experience extends Component {
   render() {
     return (
-      <div className={`experience ${this.props.moreClassName || ""}`}>
+      <div id={this.props.id || ""} className={`experience ${this.props.moreClassName || ""}`}>
         <p>I am a software engineer with <b>over 4 years of experience developing web applications</b>.</p>
         <div>
         <p>Throughout my career, I have developed both <b>user-facing and backend features</b> using:</p>
