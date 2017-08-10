@@ -1,0 +1,20 @@
+{
+  "build_dir": "build",
+  "production": {
+    "options": {
+      "repo": "git@github.com:bryantyao/bryantyao.github.io.git",
+      "branch": "master"
+    }
+  },
+  "development": {
+    "options": {
+      "repo": "git@github.com:bryantyao/bryantyao.github.io-dev.git"
+    }
+  },
+  "test": {
+    "options": {
+      "repo": "git@github.com:bryantyao/bryantyao.github.io-dev.git",
+      "branch": "test-deploy"
+    }
+  }
+}
