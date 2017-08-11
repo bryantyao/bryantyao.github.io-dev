@@ -23,7 +23,7 @@ This repo contains the source for [my website](https://bryantyao.github.io) and 
 * Production: `npm run deploy:production`
   * Deploys to the `master` branch of my website's repo
   * By default, it creates a new minor release (by auto-incrementing the minor number from the last release)
-    * This can be changed by using RELEASE=major or RELEASE=fix.
+    * This can be changed by using RELEASE=major or RELEASE=patch.
 
 ## PAQ (Potentially Asked Questions)
 ### Why React?
