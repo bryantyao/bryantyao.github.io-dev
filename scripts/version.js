@@ -22,7 +22,7 @@ var getLastVersion = function() {
 }
 
 var getNextVersion = function(release_type) {
-  if(release_type !== 'major' && release_type !== 'minor' && release_type != 'fix') {
+  if(release_type !== 'major' && release_type !== 'minor' && release_type != 'patch') {
     console.log(`Invalid release type: ${release_type}`);
     process.exit(1);
   }
@@ -33,7 +33,7 @@ var getNextVersion = function(release_type) {
     process.exit(1);
   }
 
-  const [major, minor, fix] = parseVersion(last_version);
+  const [major, minor, patch] = parseVersion(last_version);
 
   let next_version = 'v';
   switch (release_type) {
@@ -43,14 +43,14 @@ var getNextVersion = function(release_type) {
     case 'minor':
       next_version += `${major}.${minor+1}.0`;
       break;
-    case 'fix':
-      next_version += `${major}.${minor}.${fix+1}`;
+    case 'patch':
+      next_version += `${major}.${minor}.${patch+1}`;
       break;
   }
   return next_version;
 }
 
-// Returns an array containing 3 elements: major, minor and fix version
+// Returns an array containing 3 elements: major, minor and patch version
 var parseVersion = function(version) {
   return version
           .substring(1)
