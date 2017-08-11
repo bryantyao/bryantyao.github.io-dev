@@ -1,10 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import jQuery from "jquery";
-import Tether from 'tether';
+import Popper from 'popper.js';
 import App from './App.jsx';
 window.$ = window.jQuery = jQuery;
-window.Tether = Tether;
+window.Popper = Popper;
 
 require('bootstrap');
 require('../node_modules/bootstrap/dist/css/bootstrap.css');
