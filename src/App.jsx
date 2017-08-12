@@ -1,28 +1,24 @@
 import * as React from "react";
 import { Component } from 'react';
 import { BrowserRouter as Router } from 'react-router-dom'
-import { Home, Experience, About } from './content/content.js';
-import Navbar from './Navbar.jsx';
-import Content from './Content.jsx';
-import NavLink from './NavLink.jsx';
+import { Home, Experience, About } from './app/pages.js';
+import { Navbar, NavLink } from './app/nav.js';
+import { Content } from './app/Content.jsx';
 
 export default class App extends Component {
   static get ROUTES() {
     return [
-      { id: 'home',
-        path: '/',
+      { path: '/',
         exact: true,
         name: "home()",
         component: Home
       },
-      { id: 'experience',
-        path: '/experience',
+      { path: '/experience',
         exact: true,
         name: "experience()",
         component: Experience
       },
-      { id: 'about',
-        path: '/about',
+      { path: '/about',
         exact: true,
         name: "about()",
         component: About
@@ -43,10 +39,6 @@ export default class App extends Component {
         </div>
       </Router>
     );
-  }
-
-  _isActive(match,location) {
-    return location.pathname === this.path;
   }
 }
 
