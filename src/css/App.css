@@ -8,5 +8,47 @@
   width: 100%;
   height: 100%;
   margin: 0;
+  background-color: black;
+  color: white;
+}
+
+.code {
+  font-size: 1.5rem;
+  font-weight: bold;
+  font-family: Courier;
+}
+
+.code .keyword,
+.code .functionName {
+  font-size: 2rem;
+  font-weight: bolder;
+}
+
+.code .keyword {
+  color: orange;
+}
+
+.code .functionName {
+  color: gold;
+}
+
+.code .symbol {
+  color: #8123ff;
+}
+
+.code .string {
+  color: teal;
+}
+
+.code .menu {
+  margin-top: 10rem;
+  display: flex;
+  justify-content: space-between;
+  width: 50%;
+
+}
+
+.code .menu > * {
+  border-bottom: 1px solid #007bff;
 }
 

@@ -7,14 +7,12 @@ export default class Header extends Component {
     var routes = this.props.routes || [];
 
     return (
-      <nav className={`navbar flex-row navbar-toggleable-md navbar-light bg-faded ${this.props.moreClassName || ""}`}>
-          <div className="navbar-nav flex-row">
-            {routes.map((route, index) => (
-              <span key={index} className="nav-item">
-                <NavLink activeClassName="active" isActive={this._isActive.bind(route)} className="nav-link" to={route.path}>{route.name}</NavLink>
-              </span>
-            ))}
-          </div>
+      <nav className={`header code d-flex flex-row justify-content-end ${this.props.moreClassName || ""}`}>
+          {routes.map((route, index) => (
+            <span key={index} className="nav-item">
+              <NavLink activeClassName="active" isActive={this._isActive.bind(route)} className="nav-link" to={route.path}>{route.name}</NavLink>
+            </span>
+          ))}
       </nav>
     );
   }

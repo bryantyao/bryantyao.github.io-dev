@@ -1,54 +1,18 @@
-.home {
+.home, .code {
   height: 100%;
-  background-color: black;
-  color: white;
-  font-family: Courier;
+  width: 100%;
+}
+
+.home {
   white-space: pre-wrap;
+  position: absolute;
+  top: 0;
 }
 
 .home .code {
-  height: 100%;
-  width: 100%;
-  font-size: 1.5rem;
-  font-weight: bold;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
-
-.home .code .keyword,
-.home .code .functionName {
-  font-size: 2rem;
-  font-weight: bolder;
-}
-
-.home .code .keyword {
-  color: orange;
-}
-
-.home .code .functionName {
-  color: gold;
-}
-
-.home .code .symbol {
-  color: #8123ff;
-}
-
-.home .code .string {
-  color: teal;
-}
-
-.home .code .menu {
-  margin-top: 10rem;
-  display: flex;
-  justify-content: space-between;
-  width: 50%;
-
-}
-
-.home .code .menu > * {
-  border-bottom: 1px solid #007bff;
-}
-
 

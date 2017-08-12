@@ -53,13 +53,9 @@ export class Home extends Component {
     const content = { __html: codeToHTML };
 
     return (
-      <div id={this.props.id || ""} className={`home d-flex ${this.props.moreClassName || ""}`}>
+      <div id={this.props.id || ""} className={`home ${this.props.moreClassName || ""}`}>
         <div className="code">
           <div dangerouslySetInnerHTML={content} />
-          <div className="menu">
-            <a href="/experience">displayExperience()</a>
-            <a href="/about">displayAbout()</a>
-          </div>
         </div>
       </div>
     );
