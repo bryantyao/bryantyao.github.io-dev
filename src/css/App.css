@@ -1,8 +1,8 @@
 @import url("./About.css");
 @import url("./Content.css");
 @import url("./Experience.css");
-@import url("./Header.css");
 @import url("./Home.css");
+@import url("./Navbar.css");
 @import url("./animations/animations.css");
 
 .app {

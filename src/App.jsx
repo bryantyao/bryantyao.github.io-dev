@@ -30,12 +30,12 @@ export default class App extends Component {
     return (
       <Router>
         <div id="app" className="app d-flex flex-column">
+          <Content routes={App.ROUTES}/>
           <Navbar>
             {App.ROUTES.map((route, index) => (
                 <NavLink key={index} to={route.path}>{route.name}</NavLink>
             ))}
           </Navbar>
-          <Content routes={App.ROUTES}/>
         </div>
       </Router>
     );
