@@ -3,6 +3,7 @@
 @import url("./Experience.css");
 @import url("./Header.css");
 @import url("./Home.css");
+@import url("./animations/animations.css");
 
 .app {
   width: 100%;

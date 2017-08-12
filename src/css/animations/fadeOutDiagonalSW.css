@@ -1,0 +1,15 @@
+@keyframes fadeOutDiagonalSW {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+    transform: translate(-50%, 50%);
+  }
+}
+
+.fadeOutDiagonalSW {
+  animation-name: fadeOutDiagonalSW;
+}
+
