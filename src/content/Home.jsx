@@ -54,7 +54,13 @@ export class Home extends Component {
 
     return (
       <div id={this.props.id || ""} className={`home d-flex ${this.props.moreClassName || ""}`}>
-        <div className="code" dangerouslySetInnerHTML={content} />
+        <div className="code">
+          <div dangerouslySetInnerHTML={content} />
+          <div className="menu">
+            <a href="/experience">displayExperience()</a>
+            <a href="/about">displayAbout()</a>
+          </div>
+        </div>
       </div>
     );
   }
