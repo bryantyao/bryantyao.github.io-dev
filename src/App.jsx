@@ -1,9 +1,10 @@
 import * as React from "react";
 import { Component } from 'react';
-import Header from './Header.jsx';
-import Content from './Content.jsx';
 import { BrowserRouter as Router } from 'react-router-dom'
 import { Home, Experience, About } from './content/content.js';
+import Navbar from './Navbar.jsx';
+import Content from './Content.jsx';
+import NavLink from './NavLink.jsx';
 
 export default class App extends Component {
   static get ROUTES() {
@@ -33,11 +34,19 @@ export default class App extends Component {
     return (
       <Router>
         <div id="app" className="app d-flex flex-column">
-        {<Header routes={App.ROUTES}/>}
+          <Navbar>
+            {App.ROUTES.map((route, index) => (
+                <NavLink key={index} to={route.path}>{route.name}</NavLink>
+            ))}
+          </Navbar>
           <Content routes={App.ROUTES}/>
         </div>
       </Router>
     );
+  }
+
+  _isActive(match,location) {
+    return location.pathname === this.path;
   }
 }
 
