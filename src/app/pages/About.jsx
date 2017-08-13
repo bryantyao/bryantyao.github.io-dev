@@ -3,8 +3,9 @@ import { Component } from 'react';
 
 export class About extends Component {
   render() {
+    const { id, moreClassName, ...other } = this.props;
     return (
-      <div id={this.props.id || ""} className={`about ${this.props.moreClassName || ""}`}>
+      <div id={id || ""} className={`about ${moreClassName || ""}`} {...other}>
         <div>
         </div>
         <div className="d-flex flex-column align-items-center">
