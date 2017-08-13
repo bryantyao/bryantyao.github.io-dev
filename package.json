@@ -26,6 +26,7 @@
   "homepage": "https://bryantyao.github.io/bryantyao.github.io-dev",
   "dependencies": {
     "bootstrap": "^4.0.0-beta",
+    "highlight.js": "^9.12.0",
     "jquery": "^3.2.1",
     "popper.js": "^1.11.1",
     "react": "^15.6.1",
