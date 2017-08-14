@@ -5,10 +5,8 @@ export class Experience extends Component {
   render() {
     const { id, moreClassName, ...other } = this.props;
     return (
-      <div id={id || ""} className={`experience ${moreClassName || ""}`} {...other}>
-        <div className="d-flex justify-content-center align-items-center w-100 h-25">
-          <h1>bryant_yao.experience</h1>
-        </div>
+      <div id={id || ""} className={`experience d-flex flex-column align-items-center h-100 w-100 mt-5 ${moreClassName || ""}`} {...other}>
+        <div className="display-4 mb-5">bryant_yao.experience</div>
         <div>
           <p>I am a <b>full-stack software engineer</b> that develops web applications.</p>
           <p>I started my career at IBM in 2012 where I helped build the IMz Tools Administration Console, a web app that helped DBAs better administrate their IMS and DB/2 databases.</p>
