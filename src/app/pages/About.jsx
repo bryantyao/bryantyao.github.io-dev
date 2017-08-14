@@ -5,20 +5,24 @@ export class About extends Component {
   render() {
     const { id, moreClassName, ...other } = this.props;
     return (
-      <div id={id || ""} className={`about d-flex justify-content-end w-100 mt-5 pr-5 ${moreClassName || ""}`} {...other}>
-        <div className="d-flex flex-column h-50">
-          {/*<h1 className="mb-5">bryant_yao.about</h1>*/}
-          <div className="display-4 mb-4">bryant_yao.about</div>
-          <div style={{ "max-width": "40rem" }}>
+      <div id={id || ""} className={`about d-flex justify-content-center w-100 mt-4 pr-5 ${moreClassName || ""}`} {...other}>
+        <div className="d-flex flex-column align-items-center w-50">
+          <div className="display-4 mb-3">bryant_yao.about</div>
+          <div className="byao mb-3"></div>
+          <div>
             <p>
-              Hey there, I'm Bryant Yao and I am a <b>full-stack software engineer</b>. I specialize in developing web applications, both front and back end features.
+              Hey there, I'm Bryant Yao and I am a <b>full-stack software engineer</b>. I specialize in developing web applications, both front and back end.
             </p>
             <p>
-              I have worked with both <b>Java</b> and <b>Ruby</b> tech stacks.
+              I am flexible working with any tech stack. I have used:
               <ul>
-                  <li>JavaScript (DojoToolkit) with  Java</li>
-                  <li>JavaScript (jQuery) and server-side templates (ERB) with Ruby on Rails</li>
+                  <li>Dojo Toolkit with Java</li>
+                  <li>jQuery and ERB server-side templates with Ruby on Rails</li>
               </ul>
+              Additionally, I am currently trying out React for this website (see <a href="https://github.com/bryantyao/bryantyao.github.io-dev">source</a>).
+            </p>
+            <p>
+              When I'm not programming, I enjoy playing video games, going to coffee shops, and sampling new beers and whiskies.
             </p>
           </div>
         </div>
