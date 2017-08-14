@@ -5,7 +5,7 @@ export class Social extends Component {
   render() {
     const { id, moreClassName, ...other } = this.props;
     return (
-      <div id={id || ""} className={`social ${moreClassName || ""}`} {...other}>
+      <div id={id || ""} className={`social d-flex justify-content-center align-items-center h-100 ${moreClassName || ""}`} {...other}>
         <div>
         </div>
         <div className="d-flex flex-column align-items-center">

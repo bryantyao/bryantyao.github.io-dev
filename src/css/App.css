@@ -5,18 +5,26 @@
 @import url("./Navbar.css");
 @import url("./Social.css");
 @import url("./code_highlight.css");
-@import url("./highlight.js/ruby.css");
+@import url("./highlightjs.css");
+@import url("./fullpagesjs.css");
+@import url("./images.css");
 
 .app {
-  /*width: 100%;
-  height: 100%;*/
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  height: 100%;
+  /*width: 100vw;
+  height: 100vh;*/
   margin: 0;
+  font-family: Inconsolata, monospace;
+  font-size: 1.5rem;
 }
 
-.app > *:nth-child(even) {
+h1, h2, h3, h4, h5, h6 {
+  font-family: Arial, sans-serif;
+}
+
+/*.app > *:nth-child(even) {
   background-color: #DFDBCE;
   color: #212529;
-}
+}*/
 

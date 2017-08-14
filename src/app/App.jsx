@@ -4,7 +4,7 @@ import { Component } from 'react';
 import { BrowserRouter as Router, Route } from 'react-router-dom'
 import { About, Experience, Home, Social } from './pages.js';
 import { Navbar, NavLink } from './nav.js';
-import { FullPage, Section } from './fullpage.js/fullpage.js';
+import { FullPage, Section } from './fullpagejs/fullpage.js';
 import $ from 'jquery'
 
 export default class App extends Component {
