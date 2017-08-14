@@ -10,7 +10,7 @@ window.Popper = Popper;
 
 // Import CSS from Libraries
 require('bootstrap');
-require('../node_modules/bootstrap/dist/css/bootstrap.css');
+/*require('../node_modules/bootstrap/dist/css/bootstrap.css');*/
 require('../node_modules/aos/dist/aos.css');
 require('../node_modules/fullpage.js/dist/jquery.fullpage.css');
 require('../node_modules/animate.css/animate.css');
