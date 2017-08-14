@@ -12,10 +12,15 @@ window.Popper = Popper;
 require('bootstrap');
 require('../node_modules/bootstrap/dist/css/bootstrap.css');
 require('../node_modules/aos/dist/aos.css');
+require('../node_modules/fullpage.js/dist/jquery.fullpage.css');
+require('../node_modules/animate.css/animate.css');
 require('./css/index.css');
 
 // Initialize any JS Libraries
+require('fullpage.js');
+
 hljs.initHighlightingOnLoad();
+
 AOS.init({
   duration: 1200,
   easing: 'ease-out-sine'

@@ -4,92 +4,75 @@ import { Component } from 'react';
 import { BrowserRouter as Router, Route } from 'react-router-dom'
 import { About, Experience, Home, Social } from './pages.js';
 import { Navbar, NavLink } from './nav.js';
+import { FullPage, Section } from './fullpage.js/fullpage.js';
 import $ from 'jquery'
 
 export default class App extends Component {
   static get ROUTES() {
     return [
       { path: '/',
+        anchor:'home',
         exact: true,
         name: "home()",
         component: Home
       },
+      { path: '/about',
+        anchor:'about',
+        exact: true,
+        name: "about()",
+        component: About
+      },
       { path: '/experience',
+        anchor:'experience',
         exact: true,
         name: "experience()",
         component: Experience
       },
-      { path: '/about',
+      { path: '/social',
+        anchor:'social',
         exact: true,
-        name: "about()",
-        component: About
+        name: "social()",
+        component: Social
       }
     ];
   }
 
-  /*constructor(props) {
-    super(props);
-    this._boundScrollWithAnimationFrame = this.scrollWithAnimationFrame.bind(this);
-  }
-
-  componentWillMount() {
-    window.addEventListener('scroll', this._boundScrollWithAnimationFrame);
-  }
-
-  componentWillUnmount() {
-    window.removeEventListener('scroll', this._boundScrollWithAnimationFrame);
-  }
-
-  scrollWithAnimationFrame(evt) {
-    $('html, body').animate({
-      scrollTop: $("#experience").offset().top
-    }, 2000);
-    evt.preventDefault();
-  }*/
-  /*componentDidMount() {
-    const body = document.body;
-    const scrollHeight = body.scrollHeight;
-
-    const myself = ReactDOM.findDOMNode(this.refs.app);
-    myself.setAttribute("style", "overflow: hidden");
-
-    body.setAttribute("style", `height: ${scrollHeight}px`);
-  }*/
-
-  /*componentDidMount() {
-    const myself = ReactDOM.findDOMNode(this.refs.app);
-    myself.setAttribute("style", "overflow: hidden");
-
-    (function(node) {
-      const nav = ["#home", "#about", "#experience", "#social"];
-      var getIndex = function() {
-        let index = nav.indexOf(window.location.hash);
-        return (index < 0 ) ? 0 : index;
+  static get FULL_PAGE_OPTIONS() {
+    const anchors = App.ROUTES.map((route)=>(route.anchor));
+    return {
+      anchors: anchors,
+      css3: true,
+      scrollingSpeed: 1000,
+      afterLoad: (anchor, index) => {
+        /*console.log(`Loaded: ${anchor} ${index}`);
+        $(`div[data-anchor='${anchor}']`).addClass('animated fadeIn');*/
+      },
+      onLeave: (index, nextIndex, direction) => {
+        /*let anchor = anchors[index];
+        console.log(`Leaving: ${anchor} ${index}`);
+        $(`div[data-anchor='${anchor}']`).removeClass('animated fadeIn');*/
       }
-
-      let _ticking = false;
-      $(node).on('mousedown', (e) => {
-        if(!_ticking) {
-          const currentIndex = getIndex();
-          const nextNav = nav[currentIndex+1];
-          console.log(`${currentIndex} | Next Nav: ${nextNav}`);
-          window.location.href = `/${nextNav}`;
-          _ticking = true;
-        }
-      });
-    }(myself));
-  }*/
+    };
+  }
 
   render() {
-    return (
-      <div id="app" ref="app" className="app d-flex flex-column">
-        <div className="content">
-          <Home data-aos="fade-in"/>
-          <About data-aos="fade-in"/>
-          <Experience data-aos="fade-in"/>
-          <Social/>
+    const components = App.ROUTES.map((route, index) => {
+      const Component = route.component;
+      return (
+        <Section key={index} onEnter="fadeIn">
+          <Component/>
+        </Section>
+      );
+    });
+
+    /*
+        <div id="content" className="content">
         </div>
-      </div>
+     */
+    return (
+      <FullPage className="app d-flex flex-column" {...App.FULL_PAGE_OPTIONS}>
+        {components}
+      </FullPage>
     );
   }
 }
