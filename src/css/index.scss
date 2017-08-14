@@ -1,11 +1,11 @@
-@import "./App.scss";
+@import "./bootstrap_overrides.scss";
 @import "bootstrap/scss/bootstrap.scss";
+@import "./App.scss";
 
 body, html, #root {
   width: 100%;
   height: 100%;
   margin: 0;
-  /*background-color: #212529;*/
   background-color: #001a33;
   color: #DFDBCE;
 }
