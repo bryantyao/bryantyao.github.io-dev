@@ -1,11 +1,34 @@
 .experience {
-  height: 100%;
-  width: 100%;
+  /*height: 100%;
+  width: 100%;*/
+  height: 100vh;
+  width: 100vw;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
 }
 
 .experience > * {
   font-size: 1.25rem;
+  max-width: 50vw;
+}
+
+.parallax {
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.ibmBG {
+  background-image: url("images/ibm.jpg");
+  height: 500px;
+  position: fixed;
+  left: 0;
+}
+
+.company {
+  height: 1000px;
+  white-space: pre-wrap;
 }
 

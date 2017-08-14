@@ -5,7 +5,8 @@ body, html, #root {
   height: 100%;
   margin: 0;
   background-color: #212529;
-  color: white;
+  color: #DFDBCE;
+  font-family: Inconsolata;
 }
 
 .linkContainer a:first-child {

@@ -9,10 +9,10 @@ export class Home extends Component {
           <pre className="code">
             <code className="language-ruby">
 {`def bryant_yao
-  { job:     'Software Engineer' ,
-    hobbies: [ 'Beer/Coffee/Whisky Enthusiast' ,
-               'Casual Gamer' ,
-               'Programming' ] }
+  Person.new( job:     'Software Engineer',
+              hobbies: [ 'Beer/Coffee/Whisky Enthusiast',
+                         'Casual Gamer',
+                         'Programming' ] )
 end`}
             </code>
           </pre>

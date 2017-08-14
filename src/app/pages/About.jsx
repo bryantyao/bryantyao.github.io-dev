@@ -6,14 +6,17 @@ export class About extends Component {
     const { id, moreClassName, ...other } = this.props;
     return (
       <div id={id || ""} className={`about ${moreClassName || ""}`} {...other}>
-        <div>
-        </div>
-        <div className="d-flex flex-column align-items-center">
-          <div>Follow me on</div>
-          <div className="linkContainer">
-            <a href="https://linkedin.com/in/bryant-yao-298aa722">LinkedIn</a>
-            <a href="https://github.com/bryantyao">GitHub</a>
-            <a href="https://untappd.com/user/bryantyao">Untappd</a>
+        <div className="d-flex flex-column justify-content-center align-items-center w-100 h-50 py-5">
+          <h1 className="mb-5">bryant_yao.about</h1>
+          <div style={{ "max-width": "40rem" }}>
+            <p>
+              Hey there, I'm Bryant Yao and I am a <b>full-stack software engineer</b>. I specialize in developing web applications, both user-facing and back end features.
+            </p>
+            <p>
+              I am always eager to learn 
+            </p>
+            <p>Hey, there I'm Bryant Yao and I am a <b>full-stack software engineer.</b></p>
+            <p>I specialize in developing web applications, both user-facing and backend features.</p>
           </div>
         </div>
       </div>

@@ -3,12 +3,15 @@
 @import url("./Experience.css");
 @import url("./Home.css");
 @import url("./Navbar.css");
+@import url("./Social.css");
 @import url("./code_highlight.css");
 @import url("./highlight.js/ruby.css");
 
 .app {
-  width: 100%;
-  height: 100%;
+  /*width: 100%;
+  height: 100%;*/
+  width: 100vw;
+  height: 100vh;
   margin: 0;
 }
 

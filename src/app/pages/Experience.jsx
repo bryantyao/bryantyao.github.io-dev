@@ -6,14 +6,14 @@ export class Experience extends Component {
     const { id, moreClassName, ...other } = this.props;
     return (
       <div id={id || ""} className={`experience ${moreClassName || ""}`} {...other}>
+        <div className="d-flex justify-content-center align-items-center w-100 h-25">
+          <h1>bryant_yao.experience</h1>
+        </div>
         <div>
-          <p>I have <b>over 4 years of experience developing web applications</b>.</p>
-          <p>Throughout my career, I have developed both <b>user-facing and backend features</b> using:</p>
-          <ul>
-              <li>JavaScript (DojoToolkit) with  Java</li>
-              <li>JavaScript (jQuery) and server-side templates (ERB) with Ruby on Rails</li>
-          </ul>
-          <p>I have also done some <b>DevOps</b> work at Health Fidelity, where I used <b>Chef and Jenkins</b> to provision and deploy to application servers.</p>
+          <p>I am a <b>full-stack software engineer</b> that develops web applications.</p>
+          <p>I started my career at IBM in 2012 where I helped build the IMz Tools Administration Console, a web app that helped DBAs better administrate their IMS and DB/2 databases.</p>
+          <p>Later, I went to Health Fidelity in 2014 where I helped productionize and build HCC Scout, a workflow tool that helped medical coders efficiently code medical documents.</p>
+          <p>At the end of 2016, I left Health Fidelity and am currently looking for new opportunities while learning new technologies.</p>
           <p>
             <span>I am always eager to learn and try new technologies. Currently, I'm dabbling with React (which is what this site is </span>
             <a href="https://github.com/bryantyao/bryantyao.github.io-dev">built in</a>
