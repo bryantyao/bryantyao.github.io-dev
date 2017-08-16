@@ -5,9 +5,9 @@ export class About extends Component {
   render() {
     const { id, moreClassName, ...other } = this.props;
     return (
-      <div id={id || ""} className={`about d-flex justify-content-center w-100 mt-4 pr-5 ${moreClassName || ""}`} {...other}>
+      <div id={id || ""} className={`about d-flex justify-content-center w-100 pt-4 ${moreClassName || ""}`} {...other}>
         <div className="d-flex flex-column align-items-center w-50">
-          <div className="display-4 mb-3">bryant_yao.about</div>
+          <div className="display-4 font-weight-bold mb-3">bryant_yao.about</div>
           <div className="byao mb-3"></div>
           <div>
             <p>
