@@ -1,5 +1,6 @@
 @import "./bootstrap_overrides.scss";
 @import "bootstrap/scss/bootstrap.scss";
+@import "./fonts.scss";
 @import "./App.scss";
 
 body, html, #root {
@@ -8,14 +9,5 @@ body, html, #root {
   margin: 0;
   background-color: #001a33;
   color: #DFDBCE;
-}
-
-.linkContainer a:first-child {
-  padding-right: 0.5rem;
-}
-
-.linkContainer a:not(:first-child) {
-  padding: 0 0.5rem;
-  border-left: 0.1rem solid black;
 }
 

@@ -12,15 +12,24 @@
 .app {
   width: 100%;
   height: 100%;
-  /*width: 100vw;
-  height: 100vh;*/
   margin: 0;
-  font-family: Inconsolata, monospace;
+  /*font-family: Inconsolata, monospace;*/
+  font-family: Nunito, sans-serif;
   font-size: 1.5rem;
 }
 
-h1, h2, h3, h4, h5, h6 {
-  font-family: Arial, sans-serif;
+h1, h2, h3, h4, h5, h6, .display-1, .display-2, .display-3, .display-4 {
+  /*font-family: Arial, sans-serif;*/
+  font-family: 'Open Sans', sans-serif;
+}
+
+.linkContainer a:first-child {
+  padding-right: 0.5rem;
+}
+
+.linkContainer a:not(:first-child) {
+  padding: 0 0.5rem;
+  border-left: 0.1rem solid #DFDBCE;
 }
 
 @include media-breakpoint-down(sm) {
