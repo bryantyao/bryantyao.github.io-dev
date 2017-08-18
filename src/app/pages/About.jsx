@@ -1,13 +1,12 @@
 import * as React from "react";
 import { Component } from 'react';
+import Page from './layouts/Page.jsx';
 
 export class About extends Component {
   render() {
     const { id, moreClassName, ...other } = this.props;
     return (
-      <div id={id || ""} className={`about d-flex justify-content-center w-100 pt-4 ${moreClassName || ""}`} {...other}>
-        <div className="d-flex flex-column align-items-center w-50">
-          <div className="display-4 font-weight-bold mb-3">bryant_yao.about</div>
+      <Page moreClassName={`about ${moreClassName || ""}`} {...other} title="bryant_yao.about">
           <div className="byao mb-3"></div>
           <div>
             <p>
@@ -25,9 +24,9 @@ export class About extends Component {
               When I'm not programming, I enjoy playing video games, going to coffee shops, and sampling new beers and whiskies.
             </p>
           </div>
-        </div>
-      </div>
+      </Page>
     );
   }
 }
+export default About;
 
