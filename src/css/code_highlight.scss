@@ -2,16 +2,16 @@
   font-size: 1.5rem;
   font-weight: bold;
   font-family: Courier;
-}
 
-.code .keyword,
-.code .functionName,
-.code .hljs-title,
-.code .hljs-section,
-.code .hljs-keyword,
-.code .hljs-selector-tag {
-  font-size: 2rem;
-  font-weight: bolder;
+  .keyword,
+  .functionName,
+  .hljs-title,
+  .hljs-section,
+  .hljs-keyword,
+  .hljs-selector-tag {
+    font-size: 2rem;
+    font-weight: bolder;
+  }
 }
 
 @media only screen and (max-width : 30rem) {
@@ -21,15 +21,15 @@
     font-family: Courier;
     line-height: 1.5rem;
     transform: scale(1,1.2);
-  }
 
-  .code .keyword,
-  .code .functionName,
-  .code .hljs-title,
-  .code .hljs-section,
-  .code .hljs-keyword,
-  .code .hljs-selector-tag {
-    font-size: 1rem
+    .keyword,
+    .functionName,
+    .hljs-title,
+    .hljs-section,
+    .hljs-keyword,
+    .hljs-selector-tag {
+      font-size: 1rem
+    }
   }
 }
 
