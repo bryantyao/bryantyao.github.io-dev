@@ -14,7 +14,7 @@
     "deploy": "node scripts/deploy.js",
     "deploy:production": "PUBLIC_URL='https://bryantyao.github.io/' NODE_ENV=production npm run deploy",
     "deploy:test": "NODE_ENV=test npm run deploy",
-    "view-build": "serve -s docs",
+    "view-build": "serve -s build",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
