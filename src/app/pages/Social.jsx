@@ -20,4 +20,5 @@ export class Social extends Component {
     );
   }
 }
+export default Social;
 

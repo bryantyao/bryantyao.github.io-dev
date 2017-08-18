@@ -20,4 +20,5 @@ end`}
     );
   }
 }
+export default Home;
 
