@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { About, Experience, Home, Social } from './pages.js';
-import { FullPage, Section } from './fullpagejs/fullpage.js';
+import { FullPage, Section, FadeInSection } from './fullpage.js';
+import { IBMLogo } from './svg.jsx';
 
 export default class App extends Component {
   static get ROUTES() {
@@ -43,19 +44,9 @@ export default class App extends Component {
   }
 
   render() {
-    const components = App.ROUTES.map((route, index) => {
-      const Component = route.component;
-      return (
-        <Section
-          key={index}
-          onEntering="opacity-0"
-          onEnter="animated fadeIn"
-          onLeave="opacity-1"
-        >
-          <Component/>
-        </Section>
-      );
-    });
+    const components = App.ROUTES.map((route, index) => (
+      <FadeInSection component={route.component} />
+    ));
 
     return (
       <FullPage className="app d-flex flex-column" options={App.FULL_PAGE_OPTIONS}>

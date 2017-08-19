@@ -64,4 +64,5 @@ export class FullPage extends Component {
     }
   }
 }
+export default FullPage;
 

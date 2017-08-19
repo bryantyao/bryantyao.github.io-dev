@@ -51,4 +51,5 @@ export class Section extends Component {
     return transition !== null && transition != undefined && typeof transition === 'string';
   }
 }
+export default Section;
 
