@@ -1,12 +1,28 @@
 .experience {
-  /*.card {
-    background-color: rgba(50, 49, 90, 0.47);
-  }*/
-  .card-deck .card {
-    border-radius: 2rem;
+  $card-border-radius: 1rem;
+
+  .card {
+    border-radius: $card-border-radius;
+    background-color: #06213c;
+    max-width: 25vw;
+  }
+
+  .card .viewCardOverlay {
+    border-radius: $card-border-radius;
+    background-color: rgba(0, 0, 0, 0.8);
+    position: absolute;
+    cursor: pointer;
+    display: none;
+  }
+
+  .card.displayOverlay {
+    .card-body {
+      opacity: 0.3;
+    }
+
+    .viewCardOverlay {
+      display: flex;
+    }
   }
 }
-/*.experience > * {
-  max-width: 50vw;
-}*/
 

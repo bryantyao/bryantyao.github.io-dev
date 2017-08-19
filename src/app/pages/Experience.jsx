@@ -9,26 +9,17 @@ export class Experience extends Component {
     return (
       <Page className={`experience ${className || ''}`} {...other} title='bryant_yao.experience'>
         <div className='d-flex justify-content-center w-75 h-100'>
-          <div className="card-deck mb-5">
-            <div className="card text-white bg-dark">
-              <h2 className="card-header">IBM</h2>
-              <div className="card-body h-100 m-auto">
-                <IBMLogo />
+          <div className="card-deck d-flex justify-content-evenly w-100 mb-5">
+            <Card className='text-white ibm'>
+              <div className="h-100 d-flex justify-content-center align-items-center">
+                <IBMLogo height={'5rem'}/>
               </div>
-              <div className="card-footer text-center">
-                <a href="#" class="btn btn-primary">View</a>
+            </Card>
+            <Card className='text-white health-fidelity'>
+              <div className="h-100 d-flex justify-content-center align-items-center">
+                <img className="card-img-top" src="/health_fidelity.png" alt="Health Fidelity" />
               </div>
-            </div>
-            <div className="card text-white bg-dark">
-              <h2 className="card-header">Health Fidelity</h2>
-              <div className="card-body">
-                <img className="card-img-top" src="..." alt="Card image cap" />
-                <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-              </div>
-              <div className="card-footer text-center">
-                <a href="#" class="btn btn-primary">View</a>
-              </div>
-            </div>
+            </Card>
           </div>
         </div>
       </Page>
