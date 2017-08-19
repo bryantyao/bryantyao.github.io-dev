@@ -5,7 +5,6 @@ import Popper from 'popper.js';
 import App from './app/App.jsx';
 import AOS from 'aos';
 import hljs from 'highlight.js';
-require('./monkey_patch.js');
 require('fullpage.js');
 // bootstrap requires a global jQuery and Popper to initialize
 window.$ = window.jQuery = jQuery;

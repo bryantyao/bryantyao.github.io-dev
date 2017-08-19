@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import _ from 'lodash';
 
 export class Section extends Component {
   constructor(props) {
@@ -24,7 +25,7 @@ export class Section extends Component {
   //private
   
   _getTransitionProp(props, transition) {
-    return transition ? (props[`on${transition.capitalize()}`] || '') : '';
+    return transition ? (props[`on${_.capitalize(transition)}`] || '') : '';
   }
 }
 export default Section;
