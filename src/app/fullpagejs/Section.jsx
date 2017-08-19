@@ -35,7 +35,7 @@ export class Section extends Component {
 
     const child = React.Children.only(this.props.children);
     const childWithTransition = React.cloneElement(child, {
-      moreClassName: this.state.transition || ''
+      className: this.state.transition || ''
     });
 
     return(

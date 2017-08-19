@@ -4,9 +4,9 @@ import Page from './layouts/Page.jsx';
 
 export class Experience extends Component {
   render() {
-    const { moreClassName, ...other } = this.props;
+    const { className, ...other } = this.props;
     return (
-      <Page moreClassName={`experience ${moreClassName || ""}`} {...other} title="bryant_yao.experience">
+      <Page className={`experience ${className || ""}`} {...other} title="bryant_yao.experience">
         <div>
           <p>I started my career at IBM in 2012 where I helped build the IMz Tools Administration Console, a web app that helped DBAs better administrate their IMS and DB/2 databases.</p>
           <p>Later, I went to Health Fidelity in 2014 where I helped productionize and build HCC Scout, a workflow tool that helped medical coders efficiently code medical documents.</p>

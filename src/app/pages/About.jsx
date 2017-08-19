@@ -4,9 +4,9 @@ import Page from './layouts/Page.jsx';
 
 export class About extends Component {
   render() {
-    const { id, moreClassName, ...other } = this.props;
+    const { id, className, ...other } = this.props;
     return (
-      <Page moreClassName={`about ${moreClassName || ""}`} {...other} title="bryant_yao.about">
+      <Page className={`about ${className || ""}`} {...other} title="bryant_yao.about">
           <div className="byao mb-3"></div>
           <div>
             <p>

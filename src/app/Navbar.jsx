@@ -4,7 +4,7 @@ import { Component } from 'react';
 export class Navbar extends Component {
   render() {
     return (
-      <nav className={`header code d-flex flex-row justify-content-end ${this.props.moreClassName || ""}`}>
+      <nav className={`header code d-flex flex-row justify-content-end ${this.props.className || ""}`}>
           {this.props.children}
       </nav>
     );
