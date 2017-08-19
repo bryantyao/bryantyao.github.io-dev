@@ -1,5 +1,12 @@
-
-.experience > * {
-  max-width: 50vw;
+.experience {
+  /*.card {
+    background-color: rgba(50, 49, 90, 0.47);
+  }*/
+  .card-deck .card {
+    border-radius: 2rem;
+  }
 }
+/*.experience > * {
+  max-width: 50vw;
+}*/
 

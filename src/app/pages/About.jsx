@@ -7,7 +7,8 @@ export class About extends Component {
     const { className, ...other } = this.props;
     return (
       <Page className={`about ${className || ""}`} {...other} title="bryant_yao.about">
-          <div className="byao mb-3"></div>
+        <div className="byao mb-3"></div>
+        <div className="d-flex flex-column align-items-center w-50">
           <div>
             <p>
               Hey there, I'm Bryant Yao and I am a <b>full-stack software engineer</b>. I specialize in developing web applications, both front and back end.
@@ -24,6 +25,7 @@ export class About extends Component {
               When I'm not programming, I enjoy playing video games, going to coffee shops, and sampling new beers and whiskies.
             </p>
           </div>
+        </div>
       </Page>
     );
   }

@@ -7,9 +7,7 @@ export class Page extends Component {
     return (
       <div className={`d-flex flex-column align-items-center h-100 w-100 pt-4 ${className || ""}`} {...other}>
         <div className="display-4 font-weight-bold mb-4">{title}</div>
-        <div className="d-flex flex-column align-items-center w-50">
-          {children}
-        </div>
+        {children}
       </div>
     );
   }

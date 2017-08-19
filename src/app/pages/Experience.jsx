@@ -1,19 +1,35 @@
-import * as React from "react";
-import { Component } from 'react';
+import React, { Component } from 'react';
+import Card from '../Card.jsx';
 import Page from './layouts/Page.jsx';
+import { IBMLogo } from '../svg.jsx';
 
 export class Experience extends Component {
   render() {
     const { className, ...other } = this.props;
     return (
-      <Page className={`experience ${className || ""}`} {...other} title="bryant_yao.experience">
-        <div>
-          <p>I started my career at IBM in 2012 where I helped build the IMz Tools Administration Console, a web app that helped DBAs better administrate their IMS and DB/2 databases.</p>
-          <p>Later, I went to Health Fidelity in 2014 where I helped productionize and build HCC Scout, a workflow tool that helped medical coders efficiently code medical documents.</p>
-          <p>At the end of 2016, I left Health Fidelity and am currently looking for new opportunities while learning new technologies.</p>
-          <p><span>If you would like a copy of my resume, click </span>
-            <a href="https://github.com/bryantyao/resume/raw/master/bryantyao_resume.pdf">here</a><span>.</span>
-          </p>
+      <Page className={`experience ${className || ''}`} {...other} title='bryant_yao.experience'>
+        <div className='d-flex justify-content-center w-75 h-100'>
+          <div className="card-deck mb-5">
+            <div className="card text-white bg-dark">
+              <h2 className="card-header">IBM</h2>
+              <div className="card-body h-100 m-auto">
+                <IBMLogo />
+              </div>
+              <div className="card-footer text-center">
+                <a href="#" class="btn btn-primary">View</a>
+              </div>
+            </div>
+            <div className="card text-white bg-dark">
+              <h2 className="card-header">Health Fidelity</h2>
+              <div className="card-body">
+                <img className="card-img-top" src="..." alt="Card image cap" />
+                <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              </div>
+              <div className="card-footer text-center">
+                <a href="#" class="btn btn-primary">View</a>
+              </div>
+            </div>
+          </div>
         </div>
       </Page>
     );
