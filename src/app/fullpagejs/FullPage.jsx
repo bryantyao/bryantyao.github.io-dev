@@ -5,7 +5,7 @@ import $ from 'jquery';
 
 export class FullPage extends Component {
   componentDidMount() {
-    const props = Object.assign({}, props, {
+    const props = Object.assign({}, this.props.options, {
       afterLoad: this._afterLoad.bind(this),
       onLeave: this._onLeave.bind(this)
     });

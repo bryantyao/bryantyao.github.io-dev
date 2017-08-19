@@ -1,59 +1,54 @@
-import * as React from "react";
-import { Component } from 'react';
-import ReactDOM from 'react-dom';
-import { BrowserRouter as Router, Route } from 'react-router-dom'
-import $ from 'jquery'
+import React, { Component } from "react";
 
 export class Section extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {};
+  }
 
   beforeEnter() {
-    const onEnter = this.props.onEnter;
+    const onEntering = this.props.onEntering;
 
-    if(onEnter !== null && onEnter !== undefined) {
-      if(typeof onEnter === 'string') {
-        const dom = ReactDOM.findDOMNode(this.child);
-        $(dom).css("opacity", 0);
-      }
+    if(this._isValidTransition(onEntering)) {
+      this.setState({ transition: onEntering });
     }
   }
 
   onEnter() {
     const onEnter = this.props.onEnter;
 
-    if(onEnter !== null && onEnter !== undefined) {
-      if(typeof onEnter === 'string') {
-        const dom = ReactDOM.findDOMNode(this.child);
-        $(dom).addClass(`animated ${onEnter}`);
-      }
+    if(this._isValidTransition(onEnter)) {
+      this.setState({ transition: onEnter });
     }
   }
 
   onLeave() {
-    const onEnter = this.props.onEnter;
+    const onLeave = this.props.onLeave;
 
-    if(onEnter !== null && onEnter !== undefined) {
-      if(typeof onEnter === 'string') {
-        const dom = ReactDOM.findDOMNode(this.child);
-        $(dom).css("opacity", 1);
-        $(dom).removeClass(`animated ${onEnter}`);
-      }
+    if(this._isValidTransition(onLeave)) {
+      this.setState({ transition: onLeave });
     }
   }
 
   render() {
-    const { className, onEnter, onLeave, ...other } = this.props;
+    const { className, onEntering, onEnter, onLeave, ...other } = this.props;
 
     const child = React.Children.only(this.props.children);
-    const childWithRef = React.cloneElement(child, {
-      ref: (e) => { this.child = e; }
+    const childWithTransition = React.cloneElement(child, {
+      moreClassName: this.state.transition || ''
     });
-
 
     return(
       <div className={`section ${className || ''}`} {...other}>
-        {childWithRef}
+        {childWithTransition}
       </div>
     );
+  }
+
+  //private
+  
+  _isValidTransition(transition) {
+    return transition !== null && transition != undefined && typeof transition === 'string';
   }
 }
 

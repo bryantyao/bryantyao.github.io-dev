@@ -1,11 +1,6 @@
-import * as React from "react";
-import ReactDOM from 'react-dom';
-import { Component } from 'react';
-import { BrowserRouter as Router, Route } from 'react-router-dom'
+import React, { Component } from "react";
 import { About, Experience, Home, Social } from './pages.js';
-import { Navbar, NavLink } from './nav.js';
 import { FullPage, Section } from './fullpagejs/fullpage.js';
-import $ from 'jquery'
 
 export default class App extends Component {
   static get ROUTES() {
@@ -38,20 +33,12 @@ export default class App extends Component {
   }
 
   static get FULL_PAGE_OPTIONS() {
-    const anchors = App.ROUTES.map((route)=>(route.anchor));
+    const anchors = App.ROUTES.map(route => route.anchor);
+
     return {
       anchors: anchors,
       css3: true,
-      scrollingSpeed: 1000,
-      afterLoad: (anchor, index) => {
-        /*console.log(`Loaded: ${anchor} ${index}`);
-        $(`div[data-anchor='${anchor}']`).addClass('animated fadeIn');*/
-      },
-      onLeave: (index, nextIndex, direction) => {
-        /*let anchor = anchors[index];
-        console.log(`Leaving: ${anchor} ${index}`);
-        $(`div[data-anchor='${anchor}']`).removeClass('animated fadeIn');*/
-      }
+      scrollingSpeed: 1000
     };
   }
 
@@ -59,18 +46,19 @@ export default class App extends Component {
     const components = App.ROUTES.map((route, index) => {
       const Component = route.component;
       return (
-        <Section key={index} onEnter="fadeIn">
+        <Section
+          key={index}
+          onEntering="opacity-0"
+          onEnter="animated fadeIn"
+          onLeave="opacity-1"
+        >
           <Component/>
         </Section>
       );
     });
 
-    /*
-        <div id="content" className="content">
-        </div>
-     */
     return (
-      <FullPage className="app d-flex flex-column" {...App.FULL_PAGE_OPTIONS}>
+      <FullPage className="app d-flex flex-column" options={App.FULL_PAGE_OPTIONS}>
         {components}
       </FullPage>
     );
