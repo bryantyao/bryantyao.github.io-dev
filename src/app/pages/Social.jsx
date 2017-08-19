@@ -3,9 +3,9 @@ import { Component } from 'react';
 
 export class Social extends Component {
   render() {
-    const { id, className, ...other } = this.props;
+    const { className, ...other } = this.props;
     return (
-      <div id={id || ""} className={`social d-flex justify-content-center align-items-center h-100 ${className || ""}`} {...other}>
+      <div className={`social d-flex justify-content-center align-items-center h-100 ${className || ""}`} {...other}>
         <div>
         </div>
         <div className="d-flex flex-column align-items-center">
