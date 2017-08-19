@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { About, Experience, Home, Social } from './pages.js';
-import { FullPage, Section, FadeInSection } from './fullpage.js';
+import { FullPage, FadeInSection } from './fullpage.js';
 import { IBMLogo } from './svg.jsx';
 
 export default class App extends Component {

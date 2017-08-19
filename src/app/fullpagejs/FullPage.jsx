@@ -4,6 +4,11 @@ import ReactDOM from 'react-dom';
 import $ from 'jquery';
 
 export class FullPage extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {};
+  }
+
   componentDidMount() {
     const props = Object.assign({}, this.props.options, {
       afterLoad: this._afterLoad.bind(this),
@@ -17,11 +22,17 @@ export class FullPage extends Component {
   render() {
     const { className, children } = this.props;
 
-    const childrenWithRef = children.map((child, index) => (
-      React.cloneElement(child, {
+    const childrenWithRef = children.map((child, index) => {
+      let childProps = {
         ref: (e) => { this[`child_${index}`] = e }
-      })
-    ));
+      };
+
+      if(this.state[index]) {
+        childProps.transition = this.state[index];
+      }
+
+      return React.cloneElement(child, childProps)
+    });
 
     return(
       <div
@@ -37,31 +48,32 @@ export class FullPage extends Component {
 
   // Note: index starts at 1
   _afterLoad(anchor, index) {
-    const component = this[`child_${index-1}`];
-    if(!component) {
-      return;
-    }
+    const enterIndex = index-1;
+    const numChildren = this.props.children.length;
 
-    if (typeof component.onEnter === "function") { 
-      component.onEnter();
+    if(0 <= enterIndex && enterIndex < numChildren) {
+      this.setState({
+        [enterIndex]: "enter",
+      });
     }
   }
 
   // Note: index starts at 1
   _onLeave(index, nextIndex, direction) {
-    const leavingComponent = this[`child_${index-1}`];
-    if(leavingComponent) {
-      if (typeof leavingComponent.onLeave === "function") { 
-        leavingComponent.onLeave();
-      }
+    let transitions = {};
+    const leavingIndex = index-1;
+    const enteringIndex = nextIndex-1;
+    const numChildren = this.props.children.length;
+
+    if(0 <= leavingIndex && leavingIndex < numChildren) {
+      transitions[leavingIndex] = 'leaving';
     }
 
-    const enteringComponent = this[`child_${nextIndex-1}`];
-    if(enteringComponent) {
-      if (typeof enteringComponent.beforeEnter === "function") { 
-        enteringComponent.beforeEnter();
-      }
+    if(0 <= enteringIndex && enteringIndex < numChildren) {
+      transitions[enteringIndex] = 'entering';
     }
+
+    this.setState(transitions);
   }
 }
 export default FullPage;
