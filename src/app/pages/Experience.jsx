@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import Card from '../Card.jsx';
-import Page from './layouts/Page.jsx';
-import { IBMLogo } from '../svg.jsx';
+import Card from 'app/Card.jsx';
+import Page from 'app/pages/layouts/Page.jsx';
+import { IBMLogo } from 'app/svg.jsx';
 
 export class Experience extends Component {
   render() {

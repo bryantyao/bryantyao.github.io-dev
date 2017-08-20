@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import { About, Experience, Home, Social } from './pages.js';
-import { FullPage, FadeInSection } from './fullpage.js';
-import { IBMLogo } from './svg.jsx';
+import { About, Experience, Home, Social } from 'app/pages.js';
+import { FullPage, FadeInSection } from 'app/fullpage.js';
+import { IBMLogo } from 'app/svg.jsx';
 
 export default class App extends Component {
   static get ROUTES() {
