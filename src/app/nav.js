@@ -1,3 +1,3 @@
-export * from './Navbar.jsx';
-export * from './NavLink.jsx';
+export * from './nav/Navbar.jsx';
+export * from './nav/NavLink.jsx';
 

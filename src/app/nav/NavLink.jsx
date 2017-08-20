@@ -1,5 +1,4 @@
-import * as React from "react";
-import { Component } from 'react';
+import React, { Component } from 'react';
 import { NavLink as ReactNavLink } from 'react-router-dom'
 
 export class NavLink extends Component {

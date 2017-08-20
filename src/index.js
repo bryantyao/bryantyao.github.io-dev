@@ -19,7 +19,7 @@ hljs.initHighlightingOnLoad();
 AOS.init({
   duration: 1200,
   easing: 'ease-out-sine'
-})
+});
 
 // Import CSS
 require('./css/index.css');

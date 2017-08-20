@@ -1,5 +1,5 @@
-import React from "react";
-import Section from "./Section.jsx";
+import React from 'react';
+import Section from './Section.jsx';
 
 export function FadeInSection(props) {
   const { component:Component , ...other } = props;

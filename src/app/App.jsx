@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { Component } from 'react';
 import { About, Experience, Home, Social } from './pages.js';
 import { FullPage, FadeInSection } from './fullpage.js';
 import { IBMLogo } from './svg.jsx';
