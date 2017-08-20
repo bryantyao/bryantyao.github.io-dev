@@ -9,7 +9,7 @@ export class Experience extends Component {
     return (
       <Page className={`experience ${className || ''}`} {...other} title='bryant_yao.experience'>
         <div className='d-flex justify-content-center w-75 h-100'>
-          <div className="card-deck d-flex justify-content-evenly w-100 mb-5">
+          <div className="card-deck d-flex justify-content-evenly w-100 mb-4">
             <Card className='text-white ibm'>
               <div className="h-100 d-flex justify-content-center align-items-center">
                 <IBMLogo height={'5rem'}/>
