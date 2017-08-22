@@ -4,14 +4,14 @@ export class Home extends Component {
   render() {
     const { className, ...other } = this.props;
     return (
-      <div className={`home ${className || ""}`} {...other}>
+      <div className={`home centered ${className || ""}`} {...other}>
           <pre className="code">
             <code className="language-ruby">
 {`def bryant_yao
     Person.new( job:       'Software Engineer',
-              interests: [ 'Beer/Coffee/Whisky',
-                           'Gaming',
-                           'Programming' ] )
+                interests: [ 'Beer/Coffee/Whisky',
+                             'Gaming',
+                             'Programming' ] )
 end`}
             </code>
           </pre>
