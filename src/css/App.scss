@@ -15,7 +15,7 @@
   height: 100%;
   margin: 0;
   font-family: Nunito, sans-serif;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
 
   h1, h2, h3, h4, h5, h6, .display-1, .display-2, .display-3, .display-4 {
     font-family: 'Open Sans', sans-serif;
@@ -42,6 +42,10 @@
 
   .justify-content-evenly {
     justify-content: space-evenly;
+  }
+
+  .w-35 {
+    width: 35% !important;
   }
 }
 
