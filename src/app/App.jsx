@@ -1,57 +1,44 @@
 import React, { Component } from 'react';
 import { About, Experience, Home, Social } from 'app/pages.js';
-import { FullPage, FadeInSection } from 'app/fullpage.js';
-import { IBMLogo } from 'app/svg.jsx';
+import { AppBar } from 'app/nav';
+import Grid from 'material-ui/Grid';
+import Card, { CardActions, CardContent, CardMedia } from 'material-ui/Card';
+import { blue, cyan, grey } from 'material-ui/colors';
 
 export default class App extends Component {
-  static get ROUTES() {
-    return [
-      { path: '/',
-        anchor:'home',
-        exact: true,
-        name: "home()",
-        component: Home
-      },
-      { path: '/about',
-        anchor:'about',
-        exact: true,
-        name: "about()",
-        component: About
-      },
-      { path: '/experience',
-        anchor:'experience',
-        exact: true,
-        name: "experience()",
-        component: Experience
-      },
-      { path: '/social',
-        anchor:'social',
-        exact: true,
-        name: "social()",
-        component: Social
-      }
-    ];
+  static get COMPONENTS() {
+    return [ Home,
+             About,
+             Experience,
+             Social ];
   }
 
-  static get FULL_PAGE_OPTIONS() {
-    const anchors = App.ROUTES.map(route => route.anchor);
-
-    return {
-      anchors: anchors,
-      css3: true,
-      scrollingSpeed: 1000
-    };
+  constructor(props) {
+    super(props);
   }
-
+  
   render() {
-    const components = App.ROUTES.map((route, index) => (
-      <FadeInSection component={route.component} />
-    ));
-
     return (
-      <FullPage className="app d-flex flex-column" options={App.FULL_PAGE_OPTIONS}>
-        {components}
-      </FullPage>
+      <div className="app">
+        <div className="row p-3 h-100 w-100">
+          <div className="col centered h-100 flex-column">
+            <Home className='mb-5 pb-5'/>
+            <Social className="centered flex-column"/>
+          </div>
+          <div className="col row flex-column pr-0">
+            <Card className='about-card col mb-3' raised={true} style={{ 'background-color': blue[600] }}>
+              <CardContent className="h-100">
+                <About />
+              </CardContent>
+            </Card>
+            <Card className='experience-card col' raised={true} style={{ 'background-color': cyan[600] }}>
+              <CardContent className="h-100">
+                <Experience />
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </div>
     );
   }
 }

@@ -7,20 +7,10 @@ export class Experience extends Component {
   render() {
     const { className, ...other } = this.props;
     return (
-      <Page className={`experience ${className || ''}`} {...other} title='bryant_yao.experience'>
-        <div className='d-flex justify-content-center w-75 h-100'>
-          <div className="card-deck d-flex justify-content-evenly w-100 mb-4">
-            <Card className='text-white ibm'>
-              <div className="h-100 d-flex justify-content-center align-items-center">
-                <IBMLogo height={'5rem'}/>
-              </div>
-            </Card>
-            <Card className='text-white health-fidelity'>
-              <div className="h-100 d-flex justify-content-center align-items-center">
-                <img className="card-img-top" src="/health_fidelity.png" alt="Health Fidelity" />
-              </div>
-            </Card>
-          </div>
+      <Page className={`experience h-100 ${className || ''}`} {...other} title='Experience'>
+        <div className='d-flex align-items-center h-75 w-100' style={{ 'margin-left': '-2rem' }} >
+          <IBMLogo height={'5rem'}/>
+          <img className="card-img-top" src="/health_fidelity.png" alt="Health Fidelity" />
         </div>
       </Page>
     );
