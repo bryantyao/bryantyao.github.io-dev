@@ -1,20 +1,23 @@
 import React, { Component } from 'react';
+import { CodeTyper } from 'app/CodeTyper';
 
 export class Home extends Component {
-  render() {
-    const { className, ...other } = this.props;
-    return (
-      <div className={`home centered ${className || ""}`} {...other}>
-          <pre className="code">
-            <code className="language-ruby">
-{`def bryant_yao
+  static get MESSAGE() {
+    return `def bryant_yao
     Person.new( job:       'Software Engineer',
                 interests: [ 'Beer/Coffee/Whisky',
                              'Gaming',
                              'Programming' ] )
-end`}
-            </code>
-          </pre>
+end`;
+  }
+
+  render() {
+    const { className, ...other } = this.props;
+    return (
+      <div className={`home centered ${className || ""}`} {...other}>
+        <CodeTyper
+          message={Home.MESSAGE}
+          {...other} />
       </div>
     );
   }

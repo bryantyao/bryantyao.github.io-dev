@@ -56,5 +56,62 @@
       border-color: #616161;
     }
   }
+
+  /*.flexGrow {
+    max-width: 0%;
+    animation-name: flexGrow;
+    animation-timing-function: ease-out;
+    animation-duration: 300ms;
+  }
+
+  @keyframes flexGrow {
+    from {
+      max-width: 0%;
+    }
+
+    to {
+      max-width: 50%;
+    }
+  }*/
+
+  .flexGrow {
+    /* Start small (can't be 0) so we can grow our main content til it fits half the screen */
+    flex: 0.0001;
+    height: 0;
+    overflow: hidden;
+    opacity: 0;
+    animation-name: flexGrow;
+    animation-timing-function: ease-in-out;
+    animation-duration: 600ms;
+    animation-fill-mode: both;
+  }
+
+  $delay: 0;
+  $delay_step: 100;
+  @while $delay < 2000 {
+    .animated-delay-#{$delay} {
+      animation-delay: $delay + 0ms
+    }
+
+    $delay: $delay + $delay_step;
+  }
+
+  @keyframes flexGrow {
+    from {
+      opacity: 0;
+    }
+    50% {
+      height: unset;
+      flex: 1;
+      overflow: unset;
+      opacity: 0;
+    }
+    to {
+      flex: 1;
+      height: unset;
+      overflow: unset;
+      opacity: 1;
+    }
+  }
 }
 
