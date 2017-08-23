@@ -21,7 +21,7 @@ export default class App extends Component {
             <Home
               className='my-5'
               onAnimateComplete={this._introComplete}
-              typing_interval={75}
+              typing_interval={0}
             />
             <Social className={showOrHideSocial}/>
           </div>
