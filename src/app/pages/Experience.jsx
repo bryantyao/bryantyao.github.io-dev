@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import Page from 'app/pages/layouts/Page.jsx';
-import { IBMLogo } from 'app/svg.jsx';
 import Chip from 'material-ui/Chip';
 
 export class Experience extends Component {

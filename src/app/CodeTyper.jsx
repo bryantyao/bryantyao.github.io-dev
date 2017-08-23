@@ -10,7 +10,7 @@ export class CodeTyper extends Component {
     const { onAnimateComplete, message, typing_interval } = props;
 
     this.onAnimateComplete = onAnimateComplete || (() => {});
-    this.message = props.message || '';
+    this.message = message || '';
     this._type_text = this._type_text.bind(this);
 
     if(typing_interval === 0) {
