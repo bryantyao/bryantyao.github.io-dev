@@ -9,8 +9,9 @@
     "watch-css": "npm run build-css && node-sass-chokidar --include-path ./src --include-path ./node_modules src/ -o src/ --watch --recursive",
     "start-js": "react-scripts start",
     "start": "npm-run-all -p watch-css start-js",
-    "build": "npm run build-css && react-scripts build",
+    "build": "npm run build-css && react-scripts build && node scripts/create_cname.js",
     "predeploy": "npm run build",
+    "nbdeploy": "node scripts/deploy.js",
     "deploy": "node scripts/deploy.js",
     "deploy:production": "PUBLIC_URL='https://bryantyao.github.io/' NODE_ENV=production npm run deploy",
     "deploy:test": "NODE_ENV=test npm run deploy",
@@ -26,7 +27,7 @@
   "bugs": {
     "url": "https://github.com/bryantyao/bryantyao.github.io-dev/issues"
   },
-  "homepage": "https://bryantyao.github.io/bryantyao.github.io-dev",
+  "homepage": "https://dev.bryantyao.com",
   "dependencies": {
     "animate.css": "^3.5.2",
     "aos": "^2.2.0",
