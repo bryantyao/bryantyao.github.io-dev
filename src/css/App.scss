@@ -44,7 +44,7 @@
   }
 
   .skills {
-    .MuiChip-root-1 {
+    > * {
       font-size: 1rem;
 
       &:not(:first-child) {
