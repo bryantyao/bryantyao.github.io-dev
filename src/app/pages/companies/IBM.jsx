@@ -6,7 +6,6 @@ export class IBM extends Component {
     return (
       <CompanyCard
         company='IBM'
-        description='IBM blurb'
         skills={[
           'Apache Derby',
           'Dojo Toolkit',

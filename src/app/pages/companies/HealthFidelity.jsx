@@ -6,7 +6,6 @@ export class HealthFidelity extends Component {
     return (
       <CompanyCard
         company='Health Fidelity'
-        description='Health Fidelity blurb'
         skills={[
           'Chef',
           'Jenkins',

@@ -15,11 +15,11 @@ export class CompanyCard extends Component {
           <Typography className="mb-3" type="headline" component="h2">
             {headline}
           </Typography>
+          <div className="skills d-flex flex-wrap mb-3">
+            {chips}
+          </div>
           <Typography component="p">
-            <div className="skills d-flex flex-wrap mb-3">
-              {chips}
-            </div>
-            <p>{description}</p>
+            {description}
           </Typography>
         </CardContent>
         <CardActions>
