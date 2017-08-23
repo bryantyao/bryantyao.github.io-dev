@@ -1,6 +1,22 @@
 {
-  "main.css": "static/css/main.1c2db4da.css",
-  "main.css.map": "static/css/main.1c2db4da.css.map",
-  "main.js": "static/js/main.9ded3e1d.js",
-  "main.js.map": "static/js/main.9ded3e1d.js.map"
+  "main.css": "static/css/main.6fe0984e.css",
+  "main.css.map": "static/css/main.6fe0984e.css.map",
+  "main.js": "static/js/main.0eb7d954.js",
+  "main.js.map": "static/js/main.0eb7d954.js.map",
+  "static/media/byao.jpg": "static/media/byao.cdbfc7b8.jpg",
+  "static/media/nunito-v8-latin-regular.eot": "static/media/nunito-v8-latin-regular.4d45be96.eot",
+  "static/media/nunito-v8-latin-regular.svg": "static/media/nunito-v8-latin-regular.5106101c.svg",
+  "static/media/nunito-v8-latin-regular.ttf": "static/media/nunito-v8-latin-regular.02239e10.ttf",
+  "static/media/nunito-v8-latin-regular.woff": "static/media/nunito-v8-latin-regular.fb5bcbd7.woff",
+  "static/media/nunito-v8-latin-regular.woff2": "static/media/nunito-v8-latin-regular.e5ab24fb.woff2",
+  "static/media/open-sans-v14-latin-regular.eot": "static/media/open-sans-v14-latin-regular.652e01f5.eot",
+  "static/media/open-sans-v14-latin-regular.svg": "static/media/open-sans-v14-latin-regular.7aab4c13.svg",
+  "static/media/open-sans-v14-latin-regular.ttf": "static/media/open-sans-v14-latin-regular.fb6b9d71.ttf",
+  "static/media/open-sans-v14-latin-regular.woff": "static/media/open-sans-v14-latin-regular.e447d08f.woff",
+  "static/media/open-sans-v14-latin-regular.woff2": "static/media/open-sans-v14-latin-regular.9bd6fd3f.woff2",
+  "static/media/roboto-slab-v6-latin-regular.eot": "static/media/roboto-slab-v6-latin-regular.cb3625ef.eot",
+  "static/media/roboto-slab-v6-latin-regular.svg": "static/media/roboto-slab-v6-latin-regular.6b8300d4.svg",
+  "static/media/roboto-slab-v6-latin-regular.ttf": "static/media/roboto-slab-v6-latin-regular.6df82e44.ttf",
+  "static/media/roboto-slab-v6-latin-regular.woff": "static/media/roboto-slab-v6-latin-regular.fc6efd02.woff",
+  "static/media/roboto-slab-v6-latin-regular.woff2": "static/media/roboto-slab-v6-latin-regular.162678e8.woff2"
 }
