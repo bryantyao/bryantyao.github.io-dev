@@ -1,16 +1,17 @@
 import React, { Component } from 'react';
-import Page from 'app/pages/layouts/Page.jsx';
+// need TreeShaker to use the { class } syntax
+import FileDownload from 'material-ui-icons/FileDownload';
 
 export class Resume extends Component {
   render() {
     const { className, ...other } = this.props;
     return (
-      <Page className={`resume ${className || ''}`} {...other} title='Resume'>
-        <div className="linkContainer">
-          <a href="https://bryantyao.com/resume/bryantyao_resume.pdf">View</a>
-          <a href="https://github.com/bryantyao/resume/raw/master/bryantyao_resume.pdf">Download</a>
-        </div>
-      </Page>
+      <div className={`resume d-flex align-items-center ${className || ''}`} {...other}>
+        <h4>Resume</h4>
+        <a className="ml-1" href="https://bryantyao.com/resume/bryantyao_resume.pdf">
+          <FileDownload style={{ width: '1.75rem', height: '1.75rem' }}/>
+        </a>
+      </div>
     );
   }
 }

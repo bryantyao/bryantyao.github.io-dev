@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { About, Experience, Home, Resume, Social } from 'app/pages.js';
+import { About, Experience, Home, Social } from 'app/pages.js';
 import { grey } from 'material-ui/colors';
 
 export default class App extends Component {
@@ -27,9 +27,8 @@ export default class App extends Component {
           </div>
           {
             introComplete && 
-            <div className={`col d-flex flex-column pr-0 py-3 ${showOrHideMainContent}`} style={{ 'color': 'black', 'background-color': grey[50] }}>
+            <div className={`col d-flex flex-column px-3 pt-3 ${showOrHideMainContent}`} style={{ 'color': 'black', 'background-color': grey[50] }}>
               <About className=' mb-4' />
-              <Resume className=' mb-4' />
               <Experience />
             </div>
           }
