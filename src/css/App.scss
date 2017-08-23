@@ -10,12 +10,10 @@
   font-size: 1.2rem;
 
   h1, h2, h3, h4, h5, h6 {
-    /*font-family: 'Open Sans', sans-serif;*/
     font-family: 'Roboto Slab', serif;
   }
 
   h1 {
-    /*color: #00796B;*/
     font-weight: 600;
   }
 
@@ -61,26 +59,8 @@
     }
   }
 
-  /*.flexGrow {
-    max-width: 0%;
-    animation-name: flexGrow;
-    animation-timing-function: ease-out;
-    animation-duration: 300ms;
-  }
-
-  @keyframes flexGrow {
-    from {
-      max-width: 0%;
-    }
-
-    to {
-      max-width: 50%;
-    }
-  }*/
-
   .flexGrow {
-    /* Start small (can't be 0) so we can grow our main content til it fits half the screen */
-    flex: 0.0001;
+    flex: 0;
     height: 0;
     overflow: hidden;
     opacity: 0;
