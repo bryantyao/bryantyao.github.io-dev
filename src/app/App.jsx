@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { About, Experience, Home, Social } from 'app/pages.js';
+import { About, Experience, Home, Social } from 'app/pages';
 import { grey } from 'material-ui/colors';
 
 export default class App extends Component {

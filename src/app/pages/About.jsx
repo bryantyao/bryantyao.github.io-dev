@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Page from 'app/pages/layouts/Page.jsx';
+import Page from 'app/pages/layouts/Page';
 
 export class About extends Component {
   render() {
