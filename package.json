@@ -29,8 +29,6 @@
   },
   "homepage": "https://dev.bryantyao.com",
   "dependencies": {
-    "animate.css": "^3.5.2",
-    "aos": "^2.2.0",
     "bootstrap": "^4.0.0-beta",
     "fullpage.js": "^2.9.4",
     "highlight.js": "^9.12.0",

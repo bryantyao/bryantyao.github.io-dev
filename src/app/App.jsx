@@ -11,8 +11,8 @@ export default class App extends Component {
   
   render() {
     const { introComplete } = this.state;
-    const showOrHideSocial = introComplete ? 'animated animated-delay-1100 fadeIn' : 'd-none';
-    const showOrHideMainContent = introComplete ? 'animated-delay-200 flexGrow' : 'd-none';
+    const showOrHideSocial = introComplete ? 'animated-500 animated-delay-1100 fade-in' : 'd-none';
+    const showOrHideMainContent = introComplete ? 'animated-delay-200 flex-grow' : 'd-none';
 
     return (
       <div className='app'>

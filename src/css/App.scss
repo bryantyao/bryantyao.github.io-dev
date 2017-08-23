@@ -1,6 +1,7 @@
 @import "./code_highlight.scss";
 @import "./highlightjs.scss";
 @import "./images.scss";
+@import "animations.scss";
 
 .app {
   width: 100%;
@@ -56,45 +57,6 @@
   .resume {
     a:not(:first-child) {
       border-color: #616161;
-    }
-  }
-
-  .flexGrow {
-    flex: 0;
-    height: 0;
-    overflow: hidden;
-    opacity: 0;
-    animation-name: flexGrow;
-    animation-timing-function: ease-in-out;
-    animation-duration: 600ms;
-    animation-fill-mode: both;
-  }
-
-  $delay: 0;
-  $delay_step: 100;
-  @while $delay < 2000 {
-    .animated-delay-#{$delay} {
-      animation-delay: $delay + 0ms
-    }
-
-    $delay: $delay + $delay_step;
-  }
-
-  @keyframes flexGrow {
-    from {
-      opacity: 0;
-    }
-    50% {
-      height: unset;
-      flex: 1;
-      overflow: unset;
-      opacity: 0;
-    }
-    to {
-      flex: 1;
-      height: unset;
-      overflow: unset;
-      opacity: 1;
     }
   }
 }
