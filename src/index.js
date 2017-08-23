@@ -4,7 +4,6 @@ import jQuery from "jquery";
 import Popper from 'popper.js';
 import App from 'app/App.jsx';
 import hljs from 'highlight.js';
-require('fullpage.js');
 // bootstrap requires a global jQuery and Popper to initialize
 window.$ = window.jQuery = jQuery;
 window.Popper = Popper;
