@@ -1,0 +1,16 @@
+@import "bootstrap/scss/functions.scss";
+@import "bootstrap/scss/variables.scss";
+@import "auto_prefixer";
+@import "bootstrap/scss/mixins/breakpoints.scss";
+
+@include media-breakpoint-down(lg) {
+  .app {
+    background-color: #001a33;
+    > .row {
+      flex-direction: column;
+    }
+    .intro {
+      flex: 1;
+    }
+  }
+}
