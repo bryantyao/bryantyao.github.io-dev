@@ -14,7 +14,7 @@ end`;
   render() {
     const { className, ...other } = this.props;
     return (
-      <div className={`home centered ${className || ""}`} {...other}>
+      <div className={`home centered ${className || ""}`}>
         <CodeTyper
           message={Home.MESSAGE}
           {...other} />

@@ -1,11 +1,13 @@
 import React, { Component } from 'react';
 import CompanyCard from 'app/pages/companies/CompanyCard';
+import HealthFidelityLearnMore from 'app/pages/companies/HealthFidelityLearnMore';
 
 export class HealthFidelity extends Component {
   render() {
     return (
       <CompanyCard
         company='Health Fidelity'
+        learn_more={HealthFidelityLearnMore}
         skills={[
           'Chef',
           'Jenkins',
