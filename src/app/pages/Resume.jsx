@@ -8,7 +8,7 @@ export class Resume extends Component {
     return (
       <div className={`resume d-flex align-items-center ${className || ''}`} {...other}>
         <h4>Resume</h4>
-        <a className="ml-1" href="https://bryantyao.com/resume/bryantyao_resume.pdf">
+        <a className="ml-1" href="https://github.com/bryantyao/resume/raw/master/bryantyao_resume.pdf">
           <FileDownload style={{ width: '1.75rem', height: '1.75rem' }}/>
         </a>
       </div>
