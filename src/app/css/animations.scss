@@ -16,10 +16,11 @@ $time_step: 100;
 }
 
 .flex-grow {
-  flex: 0 !important;
+  flex: 0;
   height: 0;
   overflow: hidden;
   opacity: 0;
+  padding: 0 !important;
   @include auto_prefix(animation-name, flex-grow);
   @include auto_prefix(animation-timing-function, ease-in-out);
   @include auto_prefix(animation-duration, 600ms);
@@ -27,14 +28,12 @@ $time_step: 100;
 }
 
 @include auto_prefix_keyframes(flex-grow) {
-  0% {
-    opacity: 0;
-  }
   50% {
-    height: unset;
     flex: 1;
+    height: unset;
     overflow: unset;
     opacity: 0;
+    padding: unset;
   }
   100% {
     flex: 1;
