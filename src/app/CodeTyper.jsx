@@ -52,6 +52,12 @@ export class CodeTyper extends Component {
   //private
 
   _type_text() {
+    if(this.state.len >= this.message.length) {
+      clearInterval(this.text_typer_id);
+      this.onAnimateComplete();
+      return;
+    }
+
     let length = this.state.len + 1;
 
     while(this.message[length-1] === ' ') {
@@ -61,11 +67,6 @@ export class CodeTyper extends Component {
     this.setState({
       len: length
     });
-
-    if(length >= this.message.length) {
-      clearInterval(this.text_typer_id);
-      this.onAnimateComplete();
-    }
   }
 }
 export default CodeTyper;
