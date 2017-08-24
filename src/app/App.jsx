@@ -16,7 +16,7 @@ export default class App extends Component {
 
     return (
       <div className='app'>
-        <div className='row m-0 min-height-100'>
+        <div className='intro row m-0 min-height-100'>
           <div className={`col d-flex flex-column justify-content-center p-0`}>
             <Home
               className='my-5'

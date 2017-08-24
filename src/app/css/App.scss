@@ -1,15 +1,16 @@
-@import "./code_highlight.scss";
-@import "./highlightjs.scss";
-@import "./images.scss";
+@import "highlightjs.scss";
+@import "code_highlight.scss";
 @import "animations.scss";
 
 .app {
+/* ------ App ------ */
   width: 100%;
   height: 100%;
   margin: 0;
   font-family: Nunito, sans-serif;
   font-size: 1.2rem;
 
+/* ------ Global ------ */ 
   h1, h2, h3, h4, h5, h6 {
     font-family: 'Roboto Slab', serif;
   }
@@ -39,11 +40,15 @@
     }
   }
 
-  > div > div:first-child {
+/* ------ Children ------ */ 
+  .intro {
     background-color: #001a33;
     color: #fff;
   }
 
+/* ------ Components ------ */
+/* Note: These would normally be in their own files but since I have so few
+   rules, I'm keeping them here */
   .skills {
     > * {
       font-size: 1rem;
@@ -51,12 +56,6 @@
       &:not(:first-child) {
         margin-left: 0.4rem;
       }
-    }
-  }
-
-  .resume {
-    a:not(:first-child) {
-      border-color: #616161;
     }
   }
 }
