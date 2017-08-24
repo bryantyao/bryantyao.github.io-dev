@@ -8,3 +8,37 @@ body, html, #root {
   margin: 0;
 }
 
+#root {
+  font-size: 1.2rem;
+  font-family: Nunito, sans-serif;
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Roboto Slab', serif;
+  }
+
+  h1 {
+    font-weight: 600;
+  }
+
+  .centered {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .min-height-100 {
+    min-height: 100%;
+  }
+
+  .linkContainer {
+    a:first-child {
+      padding-right: 0.5rem;
+    }
+
+    a:not(:first-child) {
+      padding: 0 0.5rem;
+      border-left: 0.1rem solid #DFDBCE;
+    }
+  }
+}
+
