@@ -19,12 +19,14 @@ export default class App extends Component {
       <div className='app'>
         <div className='row m-0 min-height-100'>
           <div className={`intro col d-flex flex-column justify-content-center p-0`}>
-            <Home
-              className='my-5'
-              onAnimateComplete={this._introComplete}
-              typing_interval={typingInterval}
-            />
-            <Social className={showOrHideSocial}/>
+            <div className='d-flex flex-column justify-content-center'>
+              <Home
+                className='my-5'
+                onAnimateComplete={this._introComplete}
+                typingInterval={typingInterval}
+              />
+              <Social className={showOrHideSocial}/>
+            </div>
           </div>
           {
             introComplete && 

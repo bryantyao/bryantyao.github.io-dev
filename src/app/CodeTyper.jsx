@@ -7,25 +7,25 @@ export class CodeTyper extends Component {
 
   constructor(props) {
     super(props);
-    const { onAnimateComplete, message, typing_interval } = props;
+    const { onAnimateComplete, message, typingInterval } = props;
 
     this.onAnimateComplete = onAnimateComplete || (() => {});
     this.message = message || '';
     this._type_text = this._type_text.bind(this);
 
-    if(typing_interval === 0) {
+    if(typingInterval === 0) {
       this.state = { len: this.message.length - 1 };
-      this.typing_interval = 0;
+      this.typingInterval = 0;
     } else {
       this.state = { len: 0 }
-      this.typing_interval = props.typing_interval || CodeTyper.DEFAULT_TYPING_INTERVAL;
+      this.typingInterval = props.typingInterval || CodeTyper.DEFAULT_TYPING_INTERVAL;
     }
   }
 
   componentDidMount() {
     this.text_typer_id = setInterval(
       this._type_text,
-      this.typing_interval
+      this.typingInterval
     );
   }
 
