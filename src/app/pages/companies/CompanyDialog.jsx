@@ -31,12 +31,12 @@ class CompanyDialog extends Component {
         transition={transition || <Slide direction="up" />}
         {...other}
       >
-        <DialogActions>
+        {children}
+        <DialogActions className="mt-auto mb-4 d-flex justify-content-center">
           <IconButton color="primary" onClick={this.close} aria-label="Close">
             <CloseIcon />
           </IconButton>
         </DialogActions>
-        {children}
       </Dialog>
     );
   }
