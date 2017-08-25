@@ -10,6 +10,7 @@ export class HealthFidelity extends Component {
         learn_more={LearnMore}
         skills={[
           'Chef',
+          'Bootstrap',
           'Jenkins',
           'jQuery',
           'MySQL',
