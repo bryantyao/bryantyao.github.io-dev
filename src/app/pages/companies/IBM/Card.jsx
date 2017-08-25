@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
 import CompanyCard from 'app/pages/companies/CompanyCard';
-import IBMLearnMore from 'app/pages/companies/IBMLearnMore';
+import LearnMore from 'app/pages/companies/IBM/LearnMore';
 
 export class IBM extends Component {
   render() {
     return (
       <CompanyCard
         company='IBM'
-        learn_more={IBMLearnMore}
+        learn_more={LearnMore}
         skills={[
           'Apache Derby',
           'Dojo Toolkit',

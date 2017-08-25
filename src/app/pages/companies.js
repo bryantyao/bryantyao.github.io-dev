@@ -1,3 +1,3 @@
-export * from "./companies/HealthFidelity"
-export * from "./companies/IBM"
+export * from "./companies/HealthFidelity/Card"
+export * from "./companies/IBM/Card"
 

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import LearnMore from './LearnMore';
+import LearnMore from 'app/pages/companies/LearnMore';
 
 export class IBMLearnMore extends Component {
   render() {
