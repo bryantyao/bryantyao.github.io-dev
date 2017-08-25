@@ -5,9 +5,9 @@ export class LearnMore extends Component {
     const { children, className, title, ...other } = this.props;
 
     return (
-      <div className={`learnMore d-flex flex-column align-items-center overflow-y-auto ${className || ''}`} {...other}>
+      <div className={`learnMore d-flex flex-column align-items-center ${className || ''}`} {...other}>
         <h1 className="mb-4">{title}</h1>
-        <div className="content mx-4 mb-4">
+        <div className="content">
           {children}
         </div>
       </div>

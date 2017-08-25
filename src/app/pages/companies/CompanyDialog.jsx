@@ -31,12 +31,14 @@ class CompanyDialog extends Component {
         transition={transition || <Slide direction="up" />}
         {...other}
       >
-        {children}
-        <DialogActions className="mt-auto mb-4 d-flex justify-content-center">
-          <IconButton color="primary" onClick={this.close} aria-label="Close">
-            <CloseIcon />
-          </IconButton>
-        </DialogActions>
+        <div className="px-4 pt-4 overflow-y-auto">
+          {children}
+        </div>
+          <DialogActions className="mt-auto mb-lg-4 d-flex justify-content-center">
+            <IconButton color="primary" onClick={this.close} aria-label="Close">
+              <CloseIcon />
+            </IconButton>
+          </DialogActions>
       </Dialog>
     );
   }
