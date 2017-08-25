@@ -31,7 +31,7 @@ export default class App extends Component {
           {
             introComplete && 
             <div className={`col ${showOrHideMainContent}`} style={{ 'color': 'black', backgroundColor: grey[50] }}>
-              <div className="d-flex flex-column m-3">
+              <div className="d-flex flex-column mx-5 my-4">
                 <About className=' mb-4' />
                 <Experience />
               </div>
