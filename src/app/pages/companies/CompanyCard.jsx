@@ -14,14 +14,16 @@ export class CompanyCard extends Component {
   render() {
     const { company, description, learn_more:LearnMore, skills, year_start, year_end, ...other } = this.props;
     const headline = `${company} (${year_start}-${year_end})`;
-    const chips = skills.map((skill, i) => (<Chip key={i} label={skill} />));
+    const chips = skills.map((skill, i) => (
+      <Chip className={`mb-2 ${i !== 0 ? 'ml-2' : ''}`} key={i} label={skill} />)
+    );
     return (
       <Card {...other}>
         <CardContent>
           <Typography className="mb-3" type="headline" component="h2">
             {headline}
           </Typography>
-          <div className="skills d-flex flex-wrap mb-3">
+          <div className="skills d-flex flex-wrap mb-2">
             {chips}
           </div>
           <Typography component="p">
