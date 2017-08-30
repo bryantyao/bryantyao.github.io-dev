@@ -38,6 +38,7 @@ export class CompanyCard extends Component {
             Learn More
           </Button>
           <CompanyDialog
+            className="m-0"
             open={false}
             ref={(el) => this.dialog = el}
           >
