@@ -1,0 +1,61 @@
+@import "auto_prefixer";
+
+$time: 0;
+$time_step: 100;
+@while $time < 2000 {
+  .animated-delay-#{$time} {
+    @include auto_prefix(animation-delay, $time + 0ms);
+  }
+
+  .animated-#{$time} {
+    @include auto_prefix(animation-duration, $time + 0ms);
+    @include auto_prefix(animation-fill-mode, both);
+  }
+
+  $time: $time + $time_step;
+}
+
+.flex-grow {
+  flex: 0;
+  height: 0;
+  overflow: hidden;
+  opacity: 0;
+  padding: 0 !important;
+  @include auto_prefix(animation-name, flex-grow);
+  @include auto_prefix(animation-timing-function, ease-in-out);
+  @include auto_prefix(animation-duration, 600ms);
+  @include auto_prefix(animation-fill-mode, both);
+}
+
+@include auto_prefix_keyframes(flex-grow) {
+  50% {
+    flex: 1;
+    height: unset;
+    overflow: unset;
+    opacity: 0;
+    padding: unset;
+  }
+  100% {
+    flex: 1;
+    height: unset;
+    overflow: unset;
+    opacity: 1;
+  }
+}
+
+.fade-in {
+  @include auto_prefix(animation-name, fade-in);
+}
+
+@include auto_prefix_keyframes(fade-in) {
+  0% {
+    opacity: 0
+  }
+
+  100% {
+    opacity: 1
+  }
+}
+
+
+

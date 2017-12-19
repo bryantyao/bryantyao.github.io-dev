@@ -1,0 +1,23 @@
+$vendor_prefixes: ('-moz-', '-o-', '-webkit-', '');
+@mixin auto_prefix($property, $value) {
+  @each $prefix in $vendor_prefixes {
+    #{$prefix}#{$property}: $value;
+  }
+}
+
+/*
+ * Can't use vendor prefix + loop here since @ is a keyword
+ * Also, no @-o- because no browser ever used it (http://caniuse.com/#feat=css-animation)
+ */
+@mixin auto_prefix_keyframes($name) {
+  @-moz-keyframes #{$name} {
+    @content;
+  }
+  @-webkit-keyframes #{$name} {
+    @content;
+  }
+  @keyframes #{$name} {
+    @content;
+  }
+}
+

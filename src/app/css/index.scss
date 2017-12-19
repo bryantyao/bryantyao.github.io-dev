@@ -1,0 +1,51 @@
+@import "./bootstrap/scss/bootstrap.scss";
+@import "./fonts.scss";
+@import "./App.scss";
+
+body, html, #root {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+}
+
+#root {
+  /** Global styles */
+  font-size: 1.3rem;
+  line-height: 1.7;
+  font-family: Nunito, sans-serif;
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Roboto Slab', serif;
+  }
+
+  h1 {
+    font-weight: 600;
+  }
+
+  .centered {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .min-height-100 {
+    min-height: 100%;
+  }
+
+  .overflow-y-auto {
+    overflow-y: auto;
+  }
+
+  /** Generic Components */
+  .linkContainer {
+    a:first-child {
+      padding-right: 0.5rem;
+    }
+
+    a:not(:first-child) {
+      padding: 0 0.5rem;
+      border-left: 0.1rem solid #DFDBCE;
+    }
+  }
+}
+
