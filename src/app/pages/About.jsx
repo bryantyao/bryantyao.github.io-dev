@@ -8,16 +8,16 @@ export class About extends Component {
       <Page className={`about ${className || ""}`} {...other} title="About">
         <div className="">
           <div>
-            <p>
-              Hey there, I'm Bryant Yao and I am a <b>full-stack software engineer</b>. I specialize in developing web applications, both front end and back.
-            </p>
-            <p>
-              I love learning new technologies and I'm flexible working with most technologies. As an example, I started my career in Java and later learned Ruby (mostly from scratch) at my second job.
-              Currently, I am trying out React for this website (see <a href="https://github.com/bryantyao/bryantyao.github.io-dev">source</a>) as well as Docker.
-            </p>
-            <p>
-              When I'm not programming, I enjoy playing video games, going to coffee shops, and sampling new beers and whiskies.
-            </p>
+            <p>Hey there! I'm Bryant Yao and I'm a software engineer that develops web applications.</p>
+            <p>I am experienced with multiple facets of application development:</p>
+            <ul>
+              <li>front end (JS/HTML/CSS)</li>
+              <li>back end (Java/Ruby)</li>
+              <li>database (SQL)</li>
+              <li>deployment (Chef/Jenkins/Capistrano)</li>
+            </ul>
+            <p>Currently, I am learning React for this website (<a href="https://github.com/bryantyao/bryantyao.github.io-dev">source code</a>) and Docker.</p>
+            <p>When I'm not programming, I enjoy reading tech articles, playing video games, going to coffee shops, and sampling new beers and whiskies.</p>
           </div>
         </div>
       </Page>
